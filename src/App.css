@@ -1,0 +1,32 @@
+.searchbar,
+.forecast,
+.weather-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.forecast{
+    margin-top: 2rem;
+}
+.weather-card{
+    justify-content: space-between;
+    align-content: space-between;
+    font-size: 3rem;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 1rem;
+    border-radius: 20px;
+    width: 80%;
+    text-align: center;
+}
+.searcch-icon{
+    color: white;
+}
+.material-icons{
+    line-height: inherit;
+}
+.city-name {
+    font-weight: bolder;
+    color:white
+}
