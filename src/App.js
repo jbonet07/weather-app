@@ -13,8 +13,15 @@ class App extends Component {
         };
         this.onChangeText = this.onChangeText.bind(this);
         this.onSearch = this.onSearch.bind(this);
+        this.onEnter = this.onEnter.bind(this);
     }
 
+    onEnter(e){
+        if(e.key === 'Enter'){
+            e.preventDefault();
+            this.onSearch()
+        }
+    }
     onSearch(){
         if(this.state.city !== ""){
             this.setState({
@@ -81,12 +88,12 @@ class App extends Component {
         if (this.state.error) {
             return <div>Error: {this.state.error.message}</div>;
         } else if (!this.state.isLoaded) {
-            return <div>Loading...</div>;
+            return <div className="loader"/>;
         } else {
             return (
                 <div className="container">
                     <form className="searchbar">
-                        <input id="city-name" className="form-control" placeholder="City..." onChange={this.onChangeText}/>
+                        <input type="text" id="city-name" className="form-control" placeholder="City..." onChange={this.onChangeText} onKeyPress={this.onEnter}/>
                         <button type="button" className="btn btn-dark" onClick={this.onSearch}>
                             <i className="material-icons search-icon">search</i>
                         </button>

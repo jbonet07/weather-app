@@ -6,7 +6,8 @@ const WEATHER =  {
     "Thunderstorm": "wi wi-thunderstorm",
     "Drizzle": "wi wi-showers",
     "Rain": "wi wi-rain",
-    "Snow": "wi wi-snow"
+    "Snow": "wi wi-snow",
+    "Mist": "wi wi-fog"
 };
 
 class Forecast extends Component {
