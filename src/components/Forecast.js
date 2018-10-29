@@ -30,9 +30,11 @@ class Forecast extends Component {
                     <div className="weather-info">
 
                         <i style={{fontSize: "8rem", lineHeight: "none"}} className={WEATHER[this.state.forecast.weather[0].main]}/>
-                        <div>{Math.round((this.state.forecast.main.temp - 272.15)*100)/100}ºC</div>
-                        <div>{this.state.forecast.weather[0].main}</div>
-                        <div>{this.state.forecast.main.humidity}%</div>
+                        <div>
+                            <div>{Math.round((this.state.forecast.main.temp - 272.15)*100)/100}ºC</div>
+                            <div>{this.state.forecast.weather[0].main}</div>
+                            <div>{this.state.forecast.main.humidity}%</div>
+                        </div>
                     </div>
                 </div>
             </div>
